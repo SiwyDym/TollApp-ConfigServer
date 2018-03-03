@@ -1,0 +1,6 @@
+server:
+  port: 88
+
+spring:
+  profiles:
+    active: native
