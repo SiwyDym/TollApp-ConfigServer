@@ -1,6 +1,17 @@
 server:
   port: 88
-
 spring:
-  profiles:
-    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SiwyDym/TollApp-ConfigServerRepos
+          search-paths:
+          - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/SiwyDym/TollApp-PerfTest
+              search-paths:
+              - 'station*'
